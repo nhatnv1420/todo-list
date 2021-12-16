@@ -34,7 +34,6 @@ function Todos() {
         }
     }, [todos])
 
-    console.log('render');
     return (
         <div className="list">
             <SearchTodo />
