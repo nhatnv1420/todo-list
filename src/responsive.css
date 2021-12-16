@@ -1,4 +1,11 @@
 @media (max-width: 768px) {
+    .App {
+        padding: 6px;
+    }
+
+    .form-title {
+        margin-bottom: 24px;
+    }
     .form-add {
         width: 100%;
     }
@@ -7,7 +14,17 @@
         flex-direction: column;
     }
     .list {
+        padding: 0 2px;
+    }
+    .list-content {
+        padding: 0;
+    }
+
+    .form-add {
+        border-bottom: 2px solid rgb(168, 168, 168);
+        border-right: none;
+    }
+    .controll-items {
         margin-top: 50px;
-        margin-left: 0;
     }
 }
