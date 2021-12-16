@@ -1,0 +1,13 @@
+@media (max-width: 768px) {
+    .form-add {
+        width: 100%;
+    }
+
+    .task-manage {
+        flex-direction: column;
+    }
+    .list {
+        margin-top: 50px;
+        margin-left: 0;
+    }
+}
