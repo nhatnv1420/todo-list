@@ -35,7 +35,7 @@ function Todos() {
     }, [todos])
 
     return (
-        <div className="list">
+        <>{todos.length > 0 && <div className="list">
             <SearchTodo />
             <ul className="task-list">
                 {tasks.map((todo) => (
@@ -52,7 +52,8 @@ function Todos() {
                     idTodosChecked={idTodosChecked}
                     setIdTodosChecked={setIdTodosChecked}
                 />}
-        </div>
+        </div>}
+        </>
     )
 }
 

@@ -5,10 +5,13 @@ import { setTodos } from './todoSlice';
 function BulkAction({ idTodosChecked, setIdTodosChecked }) {
     const dispatch = useDispatch();
     const todos = useSelector(state => state.todos.list);
+
     const handleRemoveAllChecked = (idTodosChecked) => {
-        const todosRemaining = todos.filter(todo => idTodosChecked.includes(todo.id) ? false : true)
-        dispatch(setTodos(todosRemaining));
-        setIdTodosChecked([]);
+        if (window.confirm('Are you sure you want to remove')) {
+            const todosRemaining = todos.filter(todo => idTodosChecked.includes(todo.id) ? false : true)
+            dispatch(setTodos(todosRemaining));
+            setIdTodosChecked([]);
+        }
     }
 
     return (

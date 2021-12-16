@@ -18,6 +18,12 @@ function Todo({ todo, idTodosChecked, setIdTodosChecked }) {
         }
     }
 
+    const handleRemove = (id) => {
+        if (window.confirm('Are you sure remove')) {
+            dispatch(removeTodo(id));
+        }
+    }
+
     return (
         <li className="task-item" key={todo.id}>
             <div className="task-content">
@@ -38,7 +44,7 @@ function Todo({ todo, idTodosChecked, setIdTodosChecked }) {
                     </button>
                     <button
                         className="btn btn-remove"
-                        onClick={() => dispatch(removeTodo(todo.id))}
+                        onClick={() => handleRemove(todo.id)}
                     >
                         Remove
                     </button>
