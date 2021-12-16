@@ -35,24 +35,28 @@ function Todos() {
     }, [todos])
 
     return (
-        <>{todos.length > 0 && <div className="list">
-            <SearchTodo />
-            <ul className="task-list">
-                {tasks.map((todo) => (
-                    <Todo
-                        key={todo.id}
-                        todo={todo}
+        <>{todos.length > 0 &&
+            <div className="list">
+                <div className="list-content">
+                    <h2 className="form-title">To Do List</h2>
+                    <SearchTodo />
+                    <ul className="task-list">
+                        {tasks.map((todo) => (
+                            <Todo
+                                key={todo.id}
+                                todo={todo}
+                                idTodosChecked={idTodosChecked}
+                                setIdTodosChecked={setIdTodosChecked}
+                            />
+                        ))}
+                    </ul>
+                </div>
+                {idTodosChecked.length > 0 &&
+                    <BulkAction
                         idTodosChecked={idTodosChecked}
                         setIdTodosChecked={setIdTodosChecked}
-                    />
-                ))}
-            </ul>
-            {idTodosChecked.length > 0 &&
-                <BulkAction
-                    idTodosChecked={idTodosChecked}
-                    setIdTodosChecked={setIdTodosChecked}
-                />}
-        </div>}
+                    />}
+            </div>}
         </>
     )
 }

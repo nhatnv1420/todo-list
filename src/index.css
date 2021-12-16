@@ -18,8 +18,10 @@ code {
 }
 
 .App {
-  margin-top: 32px;
+  padding: 64px;
+  color: #333;
 }
+
 ul {
     list-style: none;
     padding: 0;
@@ -27,19 +29,24 @@ ul {
 
 .task-manage {
     display: flex;
-    padding: 0 32px;
+    border: 2px solid #000;
 }
+
 .form {
     border: 2px solid #888;
     padding: 20px;
-} 
+}
 
 .form-add {
     width: 40%;
+    padding: 0 40px 40px 40px;
+    border: none;
+    border-right: 2px solid rgb(168, 168, 168);
 }
 
 .form-title {
     text-align: center;
+    margin-bottom: 50px;
 }
 
 .form-input {
@@ -50,6 +57,7 @@ ul {
 .form-textarea {
     width: 100%;
     height: 100px;
+    border: 1px solid #000;
 }
 
 .input-name {
@@ -72,6 +80,7 @@ ul {
 .input-date, .input-priority {
     width: 100%;
     padding: 6px;
+    border: 1px solid #000;
 }
 
 .form-button {
@@ -90,45 +99,59 @@ ul {
 
 .btn-submit {
     width: 100%;
-    background-color: rgb(39, 133, 55);
+    background-color: #5cb85c;
     padding: 10px;
 }
 
 .list {
     flex:1;
-    margin-left: 100px;
+}
+
+.list-content {
+    padding: 0 70px;
 }
 
 .task-content, .controll-items {
-    border: 2px solid #888;
+    border: 2px solid #666;
     display: flex;
     justify-content:space-between;
     align-items:center;
-    padding: 8px 10px;
+    padding: 10px;
+}
+
+.task-name {
+    font-size: 18px;
+    margin-left: 12px;
 }
 
 .task-item + .task-item {
-    margin-top: 4px;
+    margin-top: 14px;
 }
 
 .btn-detail {
     width: 90px;
-    background-color: rgb(11, 179, 201);
+    background-color: #00bcd4;
 }
 
 .btn-remove {
     width: 90px;
-    background-color: red;
-    margin-left: 10px;
-    margin-right: 16px;
+    background-color: #d9534f;
+    margin: 0 16px;
 }
 
 .btn-done {
-    background-color: rgba(9, 89, 163, 0.822);
+    background-color: #2196f3;
     width: 90px;
+    padding: 10px;
 }
+.btn-bulk {
+    margin-left: 32px;
+    margin-right: 16px;
+    padding: 10px;
+} 
 .controll-items {
     padding-top: 16px;
     padding-bottom: 16px;
     background-color: #ddd;
+    margin-top: 100px;
 }

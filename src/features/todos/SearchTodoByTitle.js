@@ -24,7 +24,7 @@ function SearchTodoByTitle() {
                 className="form-input"
                 value={searchTodo}
                 onChange={e => setSearchTodo(e.target.value)}
-                placeholder='Search task by title...'
+                placeholder='Search...'
             />
         </div>
     )

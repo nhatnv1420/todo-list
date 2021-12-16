@@ -27,13 +27,13 @@ function Todo({ todo, idTodosChecked, setIdTodosChecked }) {
     return (
         <li className="task-item" key={todo.id}>
             <div className="task-content">
-                <div className="task-name">
+                <div>
                     <input
                         type="checkbox"
                         onChange={() => handleChangeChecked(todo.id)}
                         checked={idTodosChecked.includes(todo.id)}
                     />
-                    <span>{todo.taskTitle}</span>
+                    <span className="task-name">{todo.taskTitle}</span>
                 </div>
                 <div className="task-controll">
                     <button

@@ -65,9 +65,8 @@ function Form({ todo }) {
         <div className={todo ? "form" : "form form-add"} onSubmit={handleSubmit}>
             {todo ?
                 null :
-                <div className="form-title">
-                    <h2>New Task</h2>
-                </div>}
+                <h2 className="form-title">New Task</h2>
+            }
             <form className="form-content">
                 <div className="form-group">
                     <input

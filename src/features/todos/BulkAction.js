@@ -22,7 +22,7 @@ function BulkAction({ idTodosChecked, setIdTodosChecked }) {
             <div>
                 <button className="btn btn-done">Done</button>
                 <button
-                    className="btn btn-remove"
+                    className="btn btn-remove btn-bulk"
                     onClick={() => handleRemoveAllChecked(idTodosChecked)}
                 >
                     Remove
