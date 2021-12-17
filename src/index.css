@@ -105,10 +105,12 @@ ul {
 
 .list {
     flex:1;
+    position: relative;
 }
 
 .list-content {
     padding: 0 70px;
+    padding-bottom: 100px;
 }
 
 .task-content, .controll-items {
@@ -150,6 +152,9 @@ ul {
     padding: 10px;
 } 
 .controll-items {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
     padding-top: 16px;
     padding-bottom: 16px;
     background-color: #ddd;
